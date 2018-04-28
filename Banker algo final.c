@@ -59,21 +59,8 @@ int main()
     	
     	scanf("%d",&avail[i]);
 	}
-	system("COLOR 7");
-		printf("\nEnter Allocation for processes");
-	for(i=0;i<process;i++)
-	{
-		printf("\nP%d",i);
-	
-		for(j=0;j<resources;j++)
-       	{
-       		printf("\t");
-       		scanf(" %d", &s[i].allocation[j]);
-       	
-		}
-	}
-	system("COLOR 2");
-		printf("\nEnter Maximum Resources allocation for processes ",i);
+         system("COLOR 2");
+	printf("\nEnter Maximum Resources allocation for processes ",i);
 		Y:
 	for(i=0;i<process;i++)
 	{
@@ -85,6 +72,20 @@ int main()
      
 		}
 	}
+	system("COLOR 7");
+		printf("\nEnter Allocation for processes less than maximum value");
+	for(i=0;i<process;i++)
+	{
+		printf("\nP%d",i);
+	
+		for(j=0;j<resources;j++)
+       	{
+       		printf("\t");
+       		scanf(" %d", &s[i].allocation[j]);
+       	
+		}
+	}
+	
 	system("COLOR 8");
 	printf("\n\t\t\t\tAllocated resources Table is\n\n");
 	for (i = 0; i < process; i++) 
